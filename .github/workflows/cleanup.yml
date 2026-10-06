@@ -13,8 +13,6 @@ jobs:
     steps:
       - uses: actions/checkout@v7
         with:
-          submodules: recursive
-        with:
           token: ${{ github.token }}
 
       - name: Clean and verify string resources

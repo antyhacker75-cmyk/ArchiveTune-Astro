@@ -24,8 +24,6 @@ jobs:
     steps:
       - uses: actions/checkout@v7
         with:
-          submodules: recursive
-        with:
           submodules: true
 
       - name: Set up Python 3
@@ -93,8 +91,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v7
-        with:
-          submodules: recursive
         with:
           submodules: true
           fetch-depth: 0
@@ -267,8 +263,6 @@ jobs:
     steps:
       - uses: actions/checkout@v7
         with:
-          submodules: recursive
-        with:
           submodules: true
 
       - name: Download Artifacts
@@ -317,8 +311,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v7
-        with:
-          submodules: recursive
         with:
           submodules: true
           fetch-depth: 0

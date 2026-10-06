@@ -17,8 +17,6 @@ jobs:
     steps:
       - uses: actions/checkout@v7
         with:
-          submodules: recursive
-        with:
           fetch-depth: 0
 
       - name: Check version and Tag
@@ -58,8 +56,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-        with:
-          submodules: recursive
         with:
           submodules: true
           fetch-depth: 0
@@ -193,8 +189,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v7
-        with:
-          submodules: recursive
         with:
           submodules: true
           fetch-depth: 0
@@ -367,8 +361,6 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v7
-        with:
-          submodules: recursive
         with:
           fetch-depth: 0
           persist-credentials: false

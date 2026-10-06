@@ -12,8 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v7
         with:
-          submodules: recursive
-        with:
           submodules: true
           fetch-depth: 0
 
