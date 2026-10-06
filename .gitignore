@@ -94,7 +94,6 @@ output-metadata.json
 .vscode/
 
 # Binary files and core dumps
-core
 core.*
 !/core/
 *.so
