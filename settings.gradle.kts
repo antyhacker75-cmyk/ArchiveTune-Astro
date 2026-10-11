@@ -47,6 +47,7 @@ dependencyResolutionManagement {
 rootProject.name = "ArchiveTune"
 include(":app")
 include(":core")
+include(":lyrics")
 include(":lyrics:kugou")
 include(":lyrics:lrclib")
 include(":lyrics:simpmusic")

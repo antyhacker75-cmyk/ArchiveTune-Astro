@@ -18,7 +18,7 @@ data class TogetherJoinInfo(
     val sessionId: String,
     val sessionKey: String,
 ) {
-    fun toWebSocketUrl(): String = "ws://$host:$port/together"
+    fun toWebSocketUrl(): String = "wss://$host:$port/together"
 
     fun toDeepLink(): String {
         val charset = StandardCharsets.UTF_8.name()
