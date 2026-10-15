@@ -2335,6 +2335,7 @@ class MusicService :
                         .setUsage(android.media.AudioAttributes.USAGE_MEDIA)
                         .setContentType(android.media.AudioAttributes.CONTENT_TYPE_MUSIC)
                         .build(),
+                .setWillPauseWhenDucked(false)
                 ).setOnAudioFocusChangeListener { focusChange ->
                     handleAudioFocusChange(focusChange)
                 }.setAcceptsDelayedFocusGain(true)
@@ -3315,16 +3316,14 @@ class MusicService :
             }
 
             AudioManager.AUDIOFOCUS_LOSS_TRANSIENT -> {
-                hasAudioFocus = false
-                pauseForAudioFocusLoss(resumeWhenFocusReturns = true)
-
+                // Duck instead of pause — keeps music playing during calls.
+                audioFocusVolumeFactor.value = MIN_AUDIO_FOCUS_VOLUME_FACTOR
                 lastAudioFocusState = focusChange
             }
 
             AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK -> {
-                hasAudioFocus = false
-                pauseForAudioFocusLoss(resumeWhenFocusReturns = true)
-
+                // Duck instead of pause — keeps music playing during calls.
+                audioFocusVolumeFactor.value = MIN_AUDIO_FOCUS_VOLUME_FACTOR
                 lastAudioFocusState = focusChange
             }
 
