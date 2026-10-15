@@ -2334,8 +2334,8 @@ class MusicService :
                         .Builder()
                         .setUsage(android.media.AudioAttributes.USAGE_MEDIA)
                         .setContentType(android.media.AudioAttributes.CONTENT_TYPE_MUSIC)
+                        .setWillPauseWhenDucked(false)
                         .build(),
-                .setWillPauseWhenDucked(false)
                 ).setOnAudioFocusChangeListener { focusChange ->
                     handleAudioFocusChange(focusChange)
                 }.setAcceptsDelayedFocusGain(true)
